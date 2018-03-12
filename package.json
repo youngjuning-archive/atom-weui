@@ -1,6 +1,6 @@
 {
   "name": "atom-weui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "一款提高微信开发效率的插件 by youngjuning",
   "author": "杨俊宁",
   "keywords": [
@@ -15,6 +15,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
