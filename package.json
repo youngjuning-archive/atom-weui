@@ -1,7 +1,7 @@
 {
   "name": "atom-weui",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "一款提高微信开发效率的插件 by youngjuning",
   "author": "杨俊宁",
   "keywords": [
     "weui-wxss",

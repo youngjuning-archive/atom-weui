@@ -2,4 +2,4 @@
 '.text.html.mustache':
 	'WeUI按钮':
 		'prefix': 'weui-btn'
-		'body': '<button class="weui-btn" type="${1:primary}" ${2:hover-class="none"} bindtap="${3:btntap}">$4</button>'
+		'body': '<button class="weui-btn" type="${1:primary}" ${2:hover-class="none" }bindtap="${3:btntap}">$4</button>'
