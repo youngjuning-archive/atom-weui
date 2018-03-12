@@ -1,4 +1,13 @@
 '.text.html.mustache':
+	'文字列表附来源':
+    'prefix': 'weui-media-box__info'
+    'body': """
+      <view class="weui-media-box__info">
+        <view class="weui-media-box__info__meta">文字来源</view>
+        <view class="weui-media-box__info__meta">时间</view>
+        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">其它信息</view>
+      </view>
+    """
 	# form #
 	## List列表 ##
 	'带图标、说明的列表项':
@@ -313,14 +322,6 @@
 """
 		'description': '基于小程序普通选择器组件'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
-
-	'WeUI按钮区域':
-		'prefix': 'weui-btn-area'
-		'body': """
-<view class="weui-btn-area">
-	<button class="weui-btn" type="primary" bindtap="$1">确定</button>
-</view>
-"""
 
 	# 基础组件 #
 	## article ##
