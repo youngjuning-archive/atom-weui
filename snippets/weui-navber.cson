@@ -1,0 +1,71 @@
+'.text.html.mustache':
+	'顶部tab导航栏':
+		'prefix': 'weui-navbar'
+		'body':"""
+<view class="weui-tab">
+	<view class="weui-navbar">
+		<block wx:for="{{tabs}}" wx:key="*this">
+			<view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+				<view class="weui-navbar__title">{{item}}</view>
+			</view>
+		</block>
+		<view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+	</view>
+	<view class="weui-tab__panel">
+		<!-- hidden属性控制显示与隐藏 -->
+		<view class="weui-tab__content" hidden="{{activeIndex != 0}}">全部</view>
+		<view class="weui-tab__content" hidden="{{activeIndex != 1}}">新订单</view>
+		<view class="weui-tab__content" hidden="{{activeIndex != 2}}">已付款</view>
+		<view class="weui-tab__content" hidden="{{activeIndex != 3}}">已出库</view>
+		<view class="weui-tab__content" hidden="{{activeIndex != 4}}">发货中</view>
+		<view class="weui-tab__content" hidden="{{activeIndex != 5}}">已完成</view>
+		<view class="weui-tab__content" hidden="{{activeIndex != 6}}">已取消</view>
+	</view>
+</view>
+"""
+		'description': '和WeUI的用法差异'
+		'descriptionMoreURL': 'http://dwz.cn/7krqq7'
+
+'.source.css':
+	'顶部tab导航栏样式':
+	  'prefix': 'weui-navbar'
+	  'body': """
+.weui-navbar__slider{
+	width:3em;
+}
+"""
+	  'description': '和WeUI的用法差异'
+	  'descriptionMoreURL': 'http://dwz.cn/7krqq7'
+
+'.source.js':
+	'顶部tab导航栏逻辑':
+    'prefix': 'weui-navbar'
+    'body':"""
+const app = getApp();
+var sliderWidth = 48; // 需要设置slider的宽度，用于计算中间位置
+Page({
+  data: {
+    tabs: ['全部', '新订单', '已付款', '已出库', '发货中', '已完成', '已取消'],//tab项
+    activeIndex: 0, //初始tab项
+    sliderOffset: 0,
+    sliderLeft: 0
+  },
+  onLoad: function (options) {
+    wx.getSystemInfo({
+      success: function(res) {
+        this.setData({
+          sliderLeft: (res.windowWidth / this.data.tabs.length - sliderWidth) / 2,
+          sliderOffset: res.windowWidth / this.data.tabs.length * this.data.activeIndex
+        });
+      }.bind(this)
+    });
+  },
+  tabClick: function (e) {
+		console.log(e);
+    this.setData({
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
+  }
+});
+"""

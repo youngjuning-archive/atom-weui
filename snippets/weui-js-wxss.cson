@@ -1,0 +1,40 @@
+'.source.js':
+	'WeUI日期选择框事件处理函数':
+		'prefix': 'this-bindDateChange'
+		'body': """
+			bindDateChange: function (e) {
+				this.setData({
+					date: e.detail.value
+				})
+			}
+		"""
+	'WeUI开关事件处理函数':
+		'prefix': 'this-switchChange'
+		'body': """
+			switchChange: function (e){
+			  console.log('switch1 发生 change 事件，携带值为', e.detail.value)
+			}
+		"""
+	'WeUI选择事件处理函数':
+		'prefix': 'this-bindAccountChange'
+		'body': """
+			bindAccountChange: function(e) {
+			  console.log('picker account 发生选择改变，携带值为', e.detail.value);
+			  this.setData({
+			    accountIndex: e.detail.value
+			  })
+			}
+		"""
+	'WeUI地区选择器处理函数':
+		'prefix': 'this-bindRegionChange'
+		'body': """
+			// this.data.region: ['河南省','郑州市','中原区']
+			bindRegionChange: function(e) {
+	    	console.log('picker发送选择改变，携带值为', e.detail.value);
+	    	this.setData({
+	      	'region[0]': e.detail.value[0],
+	      	'region[1]': e.detail.value[1],
+	      	'region[2]': e.detail.value[2]
+	    	})
+	  	}
+		"""

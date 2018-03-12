@@ -1,0 +1,28 @@
+'.source.js':
+	'顶部提示框':
+		'prefix': 'weuitopTips'
+		'body': 'weui.topTips(\'错误提示信息!\');'
+	'顶部提示框详细配置':
+		'prefix': 'weui-topTips-full'
+		'body': """
+		  weui.topTips('错误提示信息!', {
+		    duration: 3000,
+		    className: "custom-classname",
+		    callback: function callback() {
+		      console.log('close');
+		    }
+		  });
+		"""
+	'带回调的confirm':
+		'prefix': 'weui-confirm'
+		'body': """
+			weui.confirm(
+				'带回调的confirm',
+				function(){
+					console.log('yes')
+				},
+				function(){
+					console.log('no')
+				}
+			)
+		"""
