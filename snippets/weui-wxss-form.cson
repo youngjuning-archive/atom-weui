@@ -1,0 +1,110 @@
+# 表单组件
+'.text.xml':
+	# button
+	'weui-btn-area':
+		'prefix': 'weui-btn-area'
+		'body': """
+			<view class="weui-btn-area">
+				<button class="weui-btn" type="${1:primary}" ${2:hover-class="none" }bindtap="${3:btntap}">确定</button>
+			</view>
+		"""
+	'weui-btn':
+		'prefix': 'weui-btn'
+		'body': '<button class="weui-btn" type="${1:primary}" ${2:hover-class="none" }bindtap="${3:btntap}">$4</button>'
+	# List
+	'weui-cells':
+	  'prefix': 'weui-cells'
+	  'body': """
+			<view class="weui-cells${1: weui-cells_after-title}">
+			</view>
+		"""
+	'weui-cells__title':
+    'prefix': 'weui-cells__title'
+    'body': '<view class="weui-cells__title">${1:section header}</view>'	
+	'weui-cell_access':
+	  'prefix': 'weui-cell_access'
+	  'body': """
+			<navigator open-type="$1" url="$2" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+				<view class="weui-cell__bd">
+					$3
+				</view>
+				<view class="weui-cell__ft weui-cell__ft_in-access">${4:说明文字}</view>
+			</navigator>
+		"""
+	'weui-cell':
+		'prefix': 'weui-cell'
+		'body': """
+			<view class="weui-cell${1: weui-cell_link}">
+				<view class="weui-cell__bd">
+					$2
+				</view>
+			</view>
+		"""
+	'weui-cell__hd':
+		'prefix': 'weui-cell__hd'
+		'body': """
+			<view class="weui-cell__hd">
+				${1:thumbnail}
+			</view>
+		"""
+	'weui-cell__bd':
+		'prefix': 'weui-cell__bd'
+		'body': """
+			<view class="weui-cell__bd">
+				$1
+			</view>
+		"""
+	'weui-cell__ft':
+		'prefix': 'weui-cell__ft'
+		'body': """
+			<view class="weui-cell__ft">
+				${1:说明文字}
+			</view>
+		"""
+	'weui-cells__tips':
+    'prefix': 'weui-cells__tips'
+    'body': '<view class="weui-cells__tips">${1:列表项的底部说明文字}</view>'
+	# input
+	'weui-lable':
+		'prefix': 'weui-label'
+		'body':'<view class="weui-label">${1:标签文字}</view>'
+	'weui-input':
+		'prefix': 'weui-cell_input'
+		'body': """
+			<view class="weui-cell weui-cell_input">
+				<view class="weui-cell__hd">
+					<view class="weui-label">${1:qq}</view>
+				</view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" value="{{$2}}" placeholder="${3:请输入qq}" bindinput="$4"/>
+				</view>
+			</view>
+		"""
+		'description': '基于小程序输入框组件'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/input.html'
+	# textarea
+	'weui-textarea':
+		'prefix': 'weui-cell_textarea'
+		'body': """
+			<view class="weui-cell">
+				<view class="weui-cell__bd">
+					<textarea class="weui-textarea" placeholder="${1:请输入文本}" ${2:style="height: 3.3em"}/>
+					<view class="weui-textarea-counter">0/200</view>
+				</view>
+			</view>
+		"""
+		'description': '基于小程序多行输入框组件'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/textarea.html'
+	# switch
+	'weui-cell_switch':
+		'prefix': 'weui-cell_switch'
+		'body': """
+			<view class="weui-cell weui-cell_switch">
+				<view class="weui-cell__bd">标题文字</view>
+				<view class="weui-cell__ft">
+					<switch checked bindchange="switchChange"/>
+				</view>
+			</view>
+		"""
+		'description': '基于小程序开关选择器组件'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/switch.html'

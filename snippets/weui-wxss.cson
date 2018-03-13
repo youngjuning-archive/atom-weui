@@ -1,4 +1,4 @@
-'.text.html.mustache':
+'.text.xml':
 	'文字列表附来源':
     'prefix': 'weui-media-box__info'
     'body': """
@@ -8,65 +8,6 @@
         <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">其它信息</view>
       </view>
     """
-	# form #
-	## List列表 ##
-	'带图标、说明的列表项':
-    'prefix': 'weui-cells'
-    'body': """
-<view class="weui-cells__title">带图标、说明的列表项</view>
-<view class="weui-cells weui-cells_after-title">
-	<view class="weui-cell">
-		<view class="weui-cell__hd">
-			<icon type="info"/>
-		</view>
-		<view class="weui-cell__bd">
-			标题文字
-		</view>
-		<view class="weui-cell__ft">
-			说明文字
-		</view>
-	</view>
-</view>
-"""
-	'weui-cell_link':
-	  'prefix': 'weui-cell_link'
-	  'body': """
-<view class="weui-cell weui-cell_link">
-  <view class="weui-cell__bd">添加更多</view>
-</view>
-"""
-	  'description': ''
-	  'descriptionMoreURL': ''
-
-	'带图标、说明、跳转的列表项':
-    'prefix': 'weui-cells-navigator'
-    'body': """
-<view class="weui-cells__title">带图标、说明、跳转的列表项</view>
-<view class="weui-cells weui-cells_after-title">
-  <navigator url="$1" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-		<view class="weui-cell__hd">
-			<icon type="info"/>
-		</view>
-    <view class="weui-cell__bd">保留当前页面，跳转到应用内的某个页面</view>
-    <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
-  </navigator>
-</view>
-"""
-
-	'列表项的底部说明':
-    'prefix': 'weui-cells__tips'
-    'body': '<view class="weui-cells__tips">列表项的底部说明文字</view>'
-
-	'weui-cell':
-    'prefix': 'weui-cell'
-    'body':"""
-<view class="weui-cell">
-  <view class="weui-cell__hd">${1:单元格右侧}</view>
-  <view class="weui-cell__bd">${2:单元格主体}</view>
-  <view class="weui-cell__ft">${3:单元格左侧}</view>
-</view>
-"""
-
 	## Input表单输入 ##
 	'weui单选列表项':
 	  'prefix': 'weui-radio-group'
@@ -146,152 +87,6 @@
 		'description': '基于小程序多项选择器'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/checkbox.html'
 
-	'WeUI label':
-		'prefix': 'weui-label'
-		'body':'<view class="weui-label">${1:标签文字}</view>'
-
-	'WeUI输入框':
-		'prefix': 'weui-cell_input'
-		'body': """
-<view class="weui-cell weui-cell_input">
-	<view class="weui-cell__hd">
-		<view class="weui-label">qq</view>
-	</view>
-	<view class="weui-cell__bd">
-		<input class="weui-input" placeholder="请输入qq" />
-	</view>
-</view>
-"""
-		'description': '基于小程序输入框组件'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/input.html'
-
-	'WeUI文本域':
-		'prefix': 'weui-cell_textarea'
-		'body': """
-<view class="weui-cell">
-	<view class="weui-cell__bd">
-		<textarea class="weui-textarea" placeholder="请输入文本" ${1:style="height: 3.3em"}/>
-		<view class="weui-textarea-counter">0/200</view>
-	</view>
-</view>
-"""
-		'description': '基于小程序多行输入框组件'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/textarea.html'
-
-	'WeUI手机号与验证码':
-		'prefix': 'weui-cell_vcode'
-		'body': """
-<view class="weui-cell weui-cell_input weui-cell_vcode">
-	<view class="weui-cell__hd">
-		<view class="weui-label">手机号</view>
-	</view>
-	<view class="weui-cell__bd">
-		<input class="weui-input" type="number" placeholder="请输入手机号" />
-	</view>
-	<view class="weui-cell__ft">
-		<view class="weui-vcode-btn">获取验证码</view>
-	</view>
-</view>
-"""
-		'description': '基于小程序输入框组件'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/input.html'
-
-	'WeUI日期选择框':
-		'prefix': 'weui-cell_datepicker'
-		'body': """
-<view class="weui-cell weui-cell_input">
-	<view class="weui-cell__hd">
-		<view class="weui-label">日期</view>
-	</view>
-	<view class="weui-cell__bd">
-		<picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="${1:bindDateChange}">
-			<view class="weui-input">{{date}}</view>
-		</picker>
-	</view>
-</view>
-"""
-		'description': '基于小程序日期选择器组件'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
-
-	'WeUI时间选择框':
-		'prefix': 'weui-cell_timepicker'
-		'body': """
-<view class="weui-cell weui-cell_input">
-  <view class="weui-cell__hd">
-    <view class="weui-label">时间</view>
-  </view>
-  <view class="weui-cell__bd">
-    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-      <view class="weui-input">{{time}}</view>
-    </picker>
-  </view>
-</view>
-"""
-		'description': '基于小程序时间选择器组件'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
-
-	'WeUI图片验证码':
-		'prefix': 'weui-cell_img_vcode'
-		'body': """
-<view class="weui-cell weui-cell_input weui-cell_vcode">
-  <view class="weui-cell__hd">
-    <view class="weui-label">验证码</view>
-  </view>
-  <view class="weui-cell__bd">
-    <input class="weui-input" placeholder="请输入验证码" />
-  </view>
-  <view class="weui-cell__ft">
-    <image class="weui-vcode-img" src="../images/vcode.jpg" style="width: 108px"></image>
-  </view>
-</view>
-"""
-
-	'WeUI表单报错':
-		'prefix': 'weui-cell_img_vcode'
-		'body': """
-<view class="weui-cell weui-cell_input ${{weui-cell_warn}}">
-	<view class="weui-cell__hd">
-		<view class="weui-label">卡号</view>
-	</view>
-	<view class="weui-cell__bd">
-		<input class="weui-input" placeholder="请输入卡号" />
-	</view>
-	<view class="weui-cell__ft">
-		<icon type="${warn}" size="23" color="#E64340"></icon>
-	</view>
-</view>
-"""
-
-	'WeUI开关':
-		'prefix': 'weui-cell_switch'
-		'body': """
-<view class="weui-cell weui-cell_switch">
-	<view class="weui-cell__bd">标题文字</view>
-	<view class="weui-cell__ft">
-		<switch checked bindchange="switchChange"/>
-	</view>
-</view>
-"""
-		'description': '基于小程序开关选择器组件'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/switch.html'
-
-	'WeUI选择框（在左侧）':
-		'prefix': 'weui-cell_select-before'
-		'body': """
-<view class="weui-cell weui-cell_select">
-  <view class="weui-cell__hd" style="width: 105px">
-    <picker bindchange="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
-      <view class="weui-select">{{countryCodes[countryCodeIndex]}}</view>
-    </picker>
-  </view>
-  <view class="weui-cell__bd weui-cell__bd_in-select-before">
-    <input class="weui-input" placeholder="请输入号码" />
-  </view>
-</view>
-"""
-		'description': '基于小程序普通选择器组件'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
-
 	'WeUI选择':
 		'prefix': 'weui-cell_select'
 		'body': """
@@ -299,23 +94,6 @@
 	<view class="weui-cell__bd">
 		<picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
 			<view class="weui-select">{{accounts[accountIndex]}}</view>
-		</picker>
-	</view>
-</view>
-"""
-		'description': '基于小程序普通选择器组件'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
-
-	'WeUI选择框（在右侧）':
-		'prefix': 'weui-cell_select-after'
-		'body': """
-<view class="weui-cell weui-cell_select">
-	<view class="weui-cell__hd weui-cell__hd_in-select-after">
-		<view class="weui-label">国家/地区</view>
-	</view>
-	<view class="weui-cell__bd">
-		<picker bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
-			<view class="weui-select weui-select_in-select-after">{{countries[countryIndex]}}</view>
 		</picker>
 	</view>
 </view>
