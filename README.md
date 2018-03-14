@@ -2,5 +2,5 @@
 
 > 一款提高微信开发效率的插件 by youngjuning
 
-## TODOLIST
-- [ ] TODO:发布v0.0.5版本
+## TODOS
+- [ ] TODO:发布v0.0.6版本
