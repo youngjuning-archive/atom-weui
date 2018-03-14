@@ -1,5 +1,5 @@
-'.text.xml':
-	'Snippet Name':
+'.text.wxml':
+	'weui-modal':
 	  'prefix': 'weui-modal'
 	  'body': """
 			<view id="${1:dialogId}" style="opacity: 1;" wx:if="{{modifyDiarys}}">

@@ -1,5 +1,5 @@
 # 表单组件
-'.text.xml':
+'.text.wxml':
 	# button
 	'weui-btn-area':
 		'prefix': 'weui-btn-area'
@@ -20,7 +20,7 @@
 		"""
 	'weui-cells__title':
     'prefix': 'weui-cells__title'
-    'body': '<view class="weui-cells__title">${1:section header}</view>'	
+    'body': '<view class="weui-cells__title">${1:section header}</view>'
 	'weui-cell_access':
 	  'prefix': 'weui-cell_access'
 	  'body': """
