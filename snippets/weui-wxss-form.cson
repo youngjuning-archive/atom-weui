@@ -108,3 +108,94 @@
 		"""
 		'description': '基于小程序开关选择器组件'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/switch.html'
+	# radio-group
+  'weui单选列表项':
+    'prefix': 'weui-radio-group'
+    'body': """
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+          <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+          <view class="weui-cell__bd">{{item.name}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+            <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+          </view>
+        </label>
+      </radio-group>
+    """
+    'description': '基于小程序单项选择器'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/radio.html'
+	# checkbox-group
+	'复选列表项（不适合购物车逻辑）':
+		'prefix': 'weui-checkbox-group'
+		'body': """
+      <view class="weui-cells__title">复选列表项</view>
+      <view class="weui-cells weui-cells_after-title">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="weui-cell weui-check__label" wx:for="{{${2:checkboxItems}}}" wx:key="value">
+          <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+          <view class="weui-cell__hd weui-check__hd_in-checkbox">
+            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+            <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+          </view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+        </label>
+      </checkbox-group>
+      <view class="weui-cell weui-cell_link">
+        <view class="weui-cell__bd">添加更多</view>
+      </view>
+      </view>
+    """
+		'description': '基于小程序多项选择器'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/checkbox.html'
+	'只有一个选项的checkbox':
+		'prefix': 'weui-checkbox'
+		'body': """
+			<checkbox-group class="weui-cells" bindchange="checkboxChange">
+				<label class="weui-cell weui-check__label">
+					<checkbox class="weui-check" value="1" checked="{{checked}}" />
+					<view class="weui-cell__hd">设置为默认</view>
+					<view class="weui-cell__bd"></view>
+					<view class="weui-cell__ft">
+						<view class="weui-cell__hd weui-check__hd_in-checkbox">
+							<icon type="circle" size="23" wx:if="{{!checked}}"></icon>
+							<icon type="success" size="23" wx:if="{{checked}}"></icon>
+						</view>
+					</view>
+				</label>
+			</checkbox-group>
+		"""
+		'description': '基于小程序多项选择器'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/checkbox.html'
+	'WeUI选择框':
+		'prefix': 'weui-cell_select'
+		'body': """
+		<view class="weui-cell weui-cell_select">
+			<view class="weui-cell__bd">
+				<picker bindchange="${1:bindAccountChange}"
+					value="{{${2:accountIndex}}}"
+					range="{{${3:accounts}}}">
+					<view class="weui-select">{{${4:accounts[accountIndex]}}}</view>
+				</picker>
+			</view>
+		</view>
+		"""
+		'description': '基于小程序普通选择器组件'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
+	'同意并阅读':
+		'prefix': 'weui-agree'
+		'body': """
+			<checkbox-group bindchange="${1:bindAgreeChange}">
+				<label class="weui-agree" for="weuiAgree">
+					<view class="weui-agree__text">
+						<checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+						<view class="weui-agree__checkbox-icon">
+							<icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+						</view>
+						阅读并同意
+						<navigator url="$2" class="weui-agree__link">《相关条款》</navigator>
+					</view>
+				</label>
+			</checkbox-group>
+		"""
+		'description': '基于小程序多项选择器'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/checkbox.html'
