@@ -1,4 +1,4 @@
-'.text.wxml':
+'.text.xml':
   'searchbar':
     'prefix': 'searchbar'
     'body': """
@@ -25,8 +25,7 @@
     'prefix': 'weui-searchbar'
     'body': """
       <view id="searchBar" class="weui-search-bar">
-      	<view class="location">当前位置</view>
-        <view class="weui-search-bar__form" bindtap="toSearch">
+        <navigator class="weui-search-bar__form" url="/pages/search/search">
           <view class="weui-search-bar__box">
             <input type="text" class="weui-search-bar__input" placeholder="搜索"/>
           </view>
@@ -34,7 +33,7 @@
             <icon class="weui-icon-search" type="search" size="14"></icon>
             <view class="weui-search-bar__text">搜索</view>
           </label>
-        </view>
+        </navigator>
       </view>
     """
     'description': '类似于微信原生的搜索栏'

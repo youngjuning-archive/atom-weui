@@ -1,0 +1,176 @@
+'.text.xml':
+	## article ##
+	'Article文章':
+    'prefix': 'weui-article'
+    'body':"""
+			<view class="weui-article">
+				<view class="weui-article__h1">大标题</view>
+					<view class="weui-article__section">
+						<view class="weui-article__title">章标题</view>
+							<view class="weui-article__section">
+								<view class="weui-article__h3">1.1 节标题</view>
+								<view class="weui-article__p">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</view>
+								<view class="weui-article__p">
+								<image class="weui-article__img" src="https://s1.ax2x.com/2018/01/28/J08nl.png" mode="aspectFit" style="height: 180px" />
+								<image class="weui-article__img" src="https://s1.ax2x.com/2018/01/28/J08nl.png" mode="aspectFit" style="height: 180px" />
+							</view>
+						</view>
+					<view class="weui-article__section">
+						<view class="weui-article__h3">1.2 节标题</view>
+						<view class="weui-article__p">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</view>
+					</view>
+				</view>
+			</view>
+		"""
+	# Badge徽章
+	'徽章':
+	  'prefix': 'weui-badge'
+	  'body': '<view class="weui-badge">8</view>'
+	'小圆点徽章':
+	  'prefix': 'weui-badge_dot'
+	  'body': '<view class="weui-badge weui-badge_dot"></view>'
+	# Flex布局
+	'Flex布局':
+	  'prefix': 'weui-flex'
+	  'body': """
+			<view class="weui-flex">
+				<view>
+					<view class="placeholder">weui</view>
+				</view>
+				<view class="weui-flex__item">
+					<view class="placeholder">weui</view>
+				</view>
+				<view>
+					<view class="placeholder">weui</view>
+				</view>
+			</view>
+		"""
+	# Footer 页脚
+	'WeUI Footer 页脚':
+		'prefix': 'weui-footer'
+		'body': """
+			<view class="weui-footer">
+				<view class="weui-footer__links">
+					<navigator url="$1" class="weui-footer__link">底部链接</navigator>
+				</view>
+				<view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+			</view>
+		"""
+	'WeUI 固定在底部的Footer':
+		'prefix': 'weui-footer_fixed-bottom'
+		'body': """
+			<view class="weui-footer weui-footer_fixed-bottom">
+				<view class="weui-footer__links">
+					<navigator url="$1" class="weui-footer__link">底部链接</navigator>
+				</view>
+				<view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+			</view>
+		"""
+	# Grid九宫格
+	'WeUI九宫格':
+		'prefix': 'weui-grid'
+		'body': """
+			<!--grids: [0, 1, 2, 3, 4, 5, 6, 7, 8]-->
+			<view class="weui-grids">
+				<block wx:for="{{grids}}" wx:key="*this">
+					<navigator url="" class="weui-grid" hover-class="weui-grid_active">
+						<image class="weui-grid__icon" src="https://s1.ax2x.com/2018/01/29/JdPN3.png" />
+						<view class="weui-grid__label">Grid</view>
+					</navigator>
+				</block>
+			</view>
+		"""
+	# 加载更多
+	'Loadmore加载更多':
+		'prefix': 'weui-loadmore'
+		'body': """
+			<view class="weui-loadmore">
+				<view class="weui-loading"></view>
+				<view class="weui-loadmore__tips">正在加载</view>
+			</view>
+		"""
+	'Loadmore暂无数据':
+		'prefix': 'weui-loadmore_line'
+		'body': """
+			<view class="weui-loadmore weui-loadmore_line">
+				<view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+			</view>
+		"""
+	'Loadmore点':
+		'prefix': 'weui-loadmore_dot'
+		'body': """
+			<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+				<view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+			</view>
+		"""
+	# panel组件
+	'Panel组件':
+	  'prefix': 'weui-panel'
+	  'body': """
+			<view class="weui-panel">
+				<view class="weui-panel__hd">Panel组件</view>
+				<view class="weui-panel__bd">
+					${1:根据不同业务可自定义不同的内容}
+				</view>
+				<view class="weui-panel__ft">
+					<view class="weui-cell weui-cell_access weui-cell_link">
+						<view class="weui-cell__bd">查看更多</view>
+						<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+					</view>
+				</view>
+			</view>
+		"""
+	  'description': '主要承载了图文组合列表'
+		'descriptionMoreURL': 'https://github.com/Tencent/weui/wiki/Panel'
+	#Preview表单预览
+	'Preview表单预览':
+		'prefix': 'weui-form-preview'
+		'body': """
+			<view class="weui-form-preview">
+				<view class="weui-form-preview__hd">
+					<view class="weui-form-preview__label">付款金额</view>
+					<view class="weui-form-preview__value_in-hd">¥2400.00</view>
+				</view>
+				<view class="weui-form-preview__bd">
+					<view class="weui-form-preview__item">
+						<view class="weui-form-preview__label">商品</view>
+						<view class="weui-form-preview__value">电动打蛋机</view>
+					</view>
+					<view class="weui-form-preview__item">
+						<view class="weui-form-preview__label">标题标题</view>
+						<view class="weui-form-preview__value">名字名字名字</view>
+					</view>
+					<view class="weui-form-preview__item">
+						<view class="weui-form-preview__label">标题标题</view>
+						<view class="weui-form-preview__value">很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</view>
+					</view>
+				</view>
+				<view class="weui-form-preview__ft">
+					<navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">辅助操作</navigator>
+					<navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">操作</navigator>
+				</view>
+			</view>
+		"""
+	## Progress进度条##
+	'Progress进度条':
+		'prefix': 'weui-progress'
+		'body': """
+			<view class="weui-progress">
+				<view class="weui-progress__bar">
+					<progress percent="80" stroke-width="3" />
+				</view>
+				<view class="weui-progress__opr">
+					<icon type="cancel" size="22"></icon>
+				</view>
+			</view>
+		"""

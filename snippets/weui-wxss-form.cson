@@ -1,5 +1,5 @@
 # 表单组件
-'.text.wxml':
+'.text.xml':
 	# button
 	'weui-btn-area':
 		'prefix': 'weui-btn-area'
