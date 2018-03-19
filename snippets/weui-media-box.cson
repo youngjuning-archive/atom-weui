@@ -20,13 +20,13 @@
 	'大图文组合列表':
 	  'prefix': 'weui-media-box_appmsg'
 	  'body': """
-	    <navigator url="$1" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+			<navigator url="$1" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
 				<view class="weui-media-box__hd_in-appmsg">
-					<image class="weui-media-box__thumb" src="http://cdn.wakeuptocode.me/poetry/libai.jpg" />
+					<image class="weui-media-box__thumb" src="${2:http://cdn.wakeuptocode.me/poetry/libai.jpg}"/>
 				</view>
 				<view class="weui-media-box__bd_in-appmsg">
-					<view class="weui-media-box__title">《静夜思》- 李白</view>
-					<view class="weui-media-box__desc">床前明月光，疑是地上光。举头望明月，低头思故乡。</view>
+					<view class="weui-media-box__title">${3:《静夜思》- 李白}</view>
+					<view class="weui-media-box__desc">${4:床前明月光，疑是地上光。举头望明月，低头思故乡。}</view>
 				</view>
 			</navigator>
 	  """

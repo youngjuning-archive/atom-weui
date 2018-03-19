@@ -132,6 +132,21 @@
 		"""
 	  'description': '主要承载了图文组合列表'
 		'descriptionMoreURL': 'https://github.com/Tencent/weui/wiki/Panel'
+	'Panel组件底部':
+	  'prefix': 'weui-pabel__ft'
+	  'body': """
+			<view class="weui-panel__ft">
+				<view class="weui-cell weui-cell_access weui-cell_link">
+					<view class="weui-cell__bd">查看更多</view>
+					<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+				</view>
+			</view>
+	  """
+	'查看更多的链接样式':
+	  'prefix': 'weui-pabel__ft'
+	  'body': """
+			<view class="${1:weui-cell__ft} weui-cell__ft_in-access"></view>
+	  """
 	#Preview表单预览
 	'Preview表单预览':
 		'prefix': 'weui-form-preview'
