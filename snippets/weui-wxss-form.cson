@@ -61,6 +61,16 @@
 				${1:说明文字}
 			</view>
 		"""
+	'weui-cell__ft_in-access':
+		'prefix': 'weui-cell__ft_in-access'
+		'body': """
+			<view class="weui-cell__ft weui-cell__ft_in-access">$1</view>
+		"""
+	'ft_in-access':
+		'prefix': 'ft_in-access'
+		'body': """
+			<view class="weui-cell__ft_in-access">$1</view>
+		"""
 	'weui-cells__tips':
     'prefix': 'weui-cells__tips'
     'body': '<view class="weui-cells__tips">${1:列表项的底部说明文字}</view>'
