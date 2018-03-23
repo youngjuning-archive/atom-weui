@@ -55,6 +55,13 @@
 				</view>
 			</view>
 		"""
+	'weui-flex__item':
+	  'prefix': 'weui-flex__item'
+	  'body': """
+			<view class="weui-flex__item">
+				$1
+			</view>
+	  """
 	# Footer 页脚
 	'WeUI Footer 页脚':
 		'prefix': 'weui-footer'
