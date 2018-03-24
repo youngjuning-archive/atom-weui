@@ -1,4 +1,4 @@
-'.text.xml':
+'.text.wxml':
 	'WeUI Panel组件':
 		'prefix': 'weui-panel-media'
 		'body': """

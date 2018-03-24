@@ -1,4 +1,4 @@
-'.text.xml':
+'.text.wxml':
 	'顶部tab导航栏':
 		'prefix': 'weui-navbar'
 		'body':"""

@@ -5,12 +5,17 @@
 		'prefix': 'weui-btn-area'
 		'body': """
 			<view class="weui-btn-area">
-				<button class="weui-btn" type="${1:primary}" ${2:hover-class="none" }bindtap="${3:btntap}">确定</button>
+				<button type="${1:primary}"
+					class="weui-btn"
+					${2:hover-class="none"}
+					bindtap="${3:btntap}">$4</button>
 			</view>
 		"""
 	'weui-btn':
 		'prefix': 'weui-btn'
-		'body': '<button class="weui-btn" type="${1:primary}" ${2:hover-class="none" }bindtap="${3:btntap}">$4</button>'
+		'body': """
+			<button type="${1:default/primary/warn}" class="weui-btn" ${2:hover-class="none" }bindtap="${3:btntap}">$4</button>
+		"""
 	# List
 	'weui-cells':
 	  'prefix': 'weui-cells'
