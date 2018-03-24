@@ -1,4 +1,4 @@
-'.text.wxml':
+'.text.xml':
 	## article ##
 	'Article文章':
     'prefix': 'weui-article'

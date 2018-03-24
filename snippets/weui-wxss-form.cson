@@ -5,10 +5,7 @@
 		'prefix': 'weui-btn-area'
 		'body': """
 			<view class="weui-btn-area">
-				<button type="${1:primary}"
-					class="weui-btn"
-					${2:hover-class="none"}
-					bindtap="${3:btntap}">$4</button>
+				<button type="${1:primary}" class="weui-btn" ${2:hover-class="none"} bindtap="${3:btntap}">$4</button>
 			</view>
 		"""
 	'weui-btn':
