@@ -5,7 +5,7 @@
 		'prefix': 'weui-btn-area'
 		'body': """
 			<view class="weui-btn-area">
-				<button type="${1:primary}" class="weui-btn" ${2:hover-class="none"} bindtap="${3:btntap}">$4</button>
+				<button type="${1:default/primary/warn}" class="weui-btn" ${2:hover-class="none"} bindtap="${3:btntap}">$4</button>
 			</view>
 		"""
 	'weui-btn':
@@ -18,6 +18,7 @@
 	  'prefix': 'weui-cells'
 	  'body': """
 			<view class="weui-cells${1: weui-cells_after-title}">
+				$2
 			</view>
 		"""
 	'weui-cells__title':
@@ -26,19 +27,33 @@
 	'weui-cell_access':
 	  'prefix': 'weui-cell_access'
 	  'body': """
-			<navigator open-type="$1" url="$2" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+			<navigator url="/pages/$1"
+				open-type="$2"
+				class="weui-cell weui-cell_access"
+				hover-class="weui-cell_active">
 				<view class="weui-cell__bd">
-					$3
+
 				</view>
-				<view class="weui-cell__ft weui-cell__ft_in-access">${4:说明文字}</view>
+				<view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
 			</navigator>
 		"""
 	'weui-cell':
 		'prefix': 'weui-cell'
 		'body': """
-			<view class="weui-cell${1: weui-cell_link}">
+			<view class="weui-cell">
 				<view class="weui-cell__bd">
 					$2
+				</view>
+			</view>
+		"""
+	'weui-cell_link':
+		'prefix': 'weui-cell'
+		'body': """
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_link">
+					<view class="weui-cell__bd">
+						$2
+					</view>
 				</view>
 			</view>
 		"""
@@ -85,10 +100,10 @@
 		'body': """
 			<view class="weui-cell weui-cell_input">
 				<view class="weui-cell__hd">
-					<view class="weui-label">${1:qq}</view>
+						<view class="weui-label">${1:QQ}</view>
 				</view>
 				<view class="weui-cell__bd">
-					<input class="weui-input" value="{{$2}}" placeholder="${3:请输入qq}" bindinput="$4"/>
+					<input class="weui-input" value="{{$2}}" placeholder="${3:请输入QQ}" bindinput="$4"/>
 				</view>
 			</view>
 		"""
@@ -121,21 +136,21 @@
 		'description': '基于小程序开关选择器组件'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/switch.html'
 	# radio-group
-  'weui单选列表项':
-    'prefix': 'weui-radio-group'
-    'body': """
-      <radio-group bindchange="radioChange">
-        <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
-          <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
-          <view class="weui-cell__bd">{{item.name}}</view>
-          <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
-            <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
-          </view>
-        </label>
-      </radio-group>
-    """
-    'description': '基于小程序单项选择器'
-    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/radio.html'
+	'weui单选列表项':
+		'prefix': 'weui-radio-group'
+		'body': """
+			<radio-group bindchange="radioChange">
+				<label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+					<radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+					<view class="weui-cell__bd">{{item.name}}</view>
+					<view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+						<icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+					</view>
+				</label>
+			</radio-group>
+		"""
+		'description': '基于小程序单项选择器'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/radio.html'
 	# checkbox-group
 	'复选列表项（不适合购物车逻辑）':
 		'prefix': 'weui-checkbox-group'
