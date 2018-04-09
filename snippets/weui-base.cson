@@ -183,7 +183,7 @@
 				</view>
 			</view>
 		"""
-	## Progress进度条##
+	# Progress进度条
 	'Progress进度条':
 		'prefix': 'weui-progress'
 		'body': """
@@ -196,3 +196,9 @@
 				</view>
 			</view>
 		"""
+	# 扩展
+	'顶部提示组件':
+	  'prefix': 'weui-toptips'
+	  'body': """
+	    <view class="weui-toptips weui-toptips_warn" wx:if="{{topTips.show}}">{{topTips.content}}</view>
+	  """
