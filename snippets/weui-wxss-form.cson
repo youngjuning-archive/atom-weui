@@ -222,3 +222,9 @@
 		"""
 		'description': '基于小程序多项选择器'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/checkbox.html'
+	# 顶部提示框
+	'顶部提示组件':
+	  'prefix': 'weui-toptips'
+	  'body': """
+	    <view class="weui-toptips weui-toptips_warn" wx:if="{{topTips.show}}">{{topTips.content}}</view>
+	  """
