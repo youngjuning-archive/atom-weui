@@ -38,7 +38,9 @@
 	  'body': '<view class="weui-badge">8</view>'
 	'小圆点徽章':
 	  'prefix': 'weui-badge_dot'
-	  'body': '<view class="weui-badge weui-badge_dot"></view>'
+	  'body': """
+			<view class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+		"""
 	# Flex布局
 	'Flex布局':
 	  'prefix': 'weui-flex'
