@@ -113,10 +113,12 @@
 	'weui-textarea':
 		'prefix': 'weui-cell_textarea'
 		'body': """
-			<view class="weui-cell">
-				<view class="weui-cell__bd">
-					<textarea class="weui-textarea" placeholder="${1:请输入文本}" ${2:style="height: 3.3em"}/>
-					<view class="weui-textarea-counter">0/200</view>
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell">
+					<view class="weui-cell__bd">
+						<textarea class="weui-textarea" placeholder="${1:请输入文本}" ${2:style="height: 3.3em"}/>
+						<view class="weui-textarea-counter">0/200</view>
+					</view>
 				</view>
 			</view>
 		"""
